@@ -1,0 +1,337 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing:border-box;
+
+}
+:root{
+    --color-primary:#6c63ff;
+    --color-success:#00bf8e;
+    --color-warning:#f7c94b;
+    --color-danger-variant:rgba(246,88,66,0.4);
+    --color-white:#fff;
+    --color-light:rgba(255,255,255,0.7);
+    --color-black:#000;
+    --color-bg:#1f2641;
+    --color-bg1:#2e3267;
+    --color-bg2:#424890;
+
+    --container-width-lg:76%;
+    --container-width-md:90%;
+    --container-width-sm:94%;
+
+    --tranisition: all 400ms ease;
+
+
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+    color:var(--color-white);
+    background: var(--color-bg);
+}
+.container{
+    width:var(--container-width-lg);
+    margin:0 auto;
+}
+section{
+    padding:6rem 0;
+}
+section h2{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+h1,h2,h3,h4,h5{
+    line-height: 1.2;
+}
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 4.6rem;
+}
+h4{
+    font-size: 1.4rem;
+}
+a{
+    color: var(--color-white);
+}
+img{
+    width:100;
+    display: block;
+    object-fit: cover;
+
+    
+}
+.btn{
+    display: inline-block;
+    background: var(--color-white);
+    color: var(--color-black);
+    padding: 1rem 2rem;
+    border: 1px soild transparent;
+    font-weight: 500;
+}
+/* nav bar*/
+nav {
+    background:#2e3267;
+    width: 100vw;
+    height:5rem;
+    position: fixed;
+    top:0;
+    z-index: 11;
+}
+/*change navbar styles on scroll using javascript*/
+.window-scroll{
+    background: var(--color-primary);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.3);
+}
+.nav__container {
+    height:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+
+}
+nav button{
+    display: none;
+}
+.nav__menu{
+    display: flex;
+    align-items: center;
+    gap:4rem;
+}
+.nav__menu a{
+    font-size: 0.9rem;
+    transition: var(--tranisition);
+}
+.nav__menu a:hover{
+    color: var(--color-bg2);
+}
+/*----Header---*/
+header{
+    position: relative;
+    top:5rem;
+    overflow: hidden;
+    height: 70vh;
+    margin-bottom: 5rem;
+}
+.header__container{
+    display: grid;
+    grid-template-columns: 2fr 0fr;
+    align-items: center;
+    gap:6rem;
+    height: 100%;
+
+}
+.header__left p{
+    margin: 1rem 0 2.4rem;
+}
+/*====categories===*/
+.categories {
+    background: var(--color-bg2);
+    height: 29rem;
+}
+.categories h1{
+    line-height: 1;
+    margin-bottom: 3rem;
+}
+.categories__container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    /*gap: 4rem;*/
+}
+.categories__left p{
+    margin: 1 rem 0 3 rem;
+}
+.categories__right{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.2rem;
+}
+.category{
+    background: var(--color-bg2);
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: var(--tranisition);
+}
+.category:hover{
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.575);
+}
+.category:nth-child(2).category__icon{
+    background: var(--color-danger-variant);
+}
+.category__icon{
+    background: var(--color-primary);
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+}
+.category h5{
+    margin: 2rem 0 1rem;
+}
+.category p{
+    font-size: 0.85rem;
+}
+
+/**about page css **/
+ 
+/* style.css */
+
+.about {
+    padding: 6rem 0;
+    text-align: center;
+  }
+  
+  .about h2 {
+    margin-bottom: 3rem;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--color-white);
+  }
+  
+  .about p {
+    font-size: 18px;
+    margin-bottom: 3rem;
+    color: var(--color-light);
+    line-height: 1.7;
+  }
+  
+  .about .features {
+    margin-bottom: 3rem;
+    text-align: left;
+  }
+  
+  .about .features h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+  }
+  
+  .about .features ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+    color: var(--color-light);
+    line-height: 1.7;
+  }
+  
+  .about .features li {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about .testimonial {
+    color: var(--color-light);
+  }
+  
+  .about .testimonial h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .about .testimonial blockquote {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 0;
+    color: var(--color-light);
+  }
+/** the contact form **/
+.contact__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .contact__container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .contact__container img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .contact__container form {
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .contact__container .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .contact__container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .contact__container input,
+  .contact__container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contact__container button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  
+  /**the css code for courses **/
+  .courses {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .course-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 20px;
+  }
+  
+  .course-list li {
+    flex-basis: calc(25% - 40px);
+  }
+  
+  .course-list a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .course-list img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .course-list span {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  
